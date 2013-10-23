@@ -1,0 +1,11 @@
+name = Meta Feature
+description = Custom feature for meta site.
+core = 7.x
+package = Collabco
+php = 5.2.4
+dependencies[] = fe_block
+dependencies[] = views
+features[fe_block_boxes][] = front_image
+features[fe_block_settings][] = block-front_image
+features[fe_block_settings][] = views-site_changes_message-block
+features[features_api][] = api:2
