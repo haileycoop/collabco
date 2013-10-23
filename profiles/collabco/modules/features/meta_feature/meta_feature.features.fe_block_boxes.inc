@@ -14,7 +14,7 @@ function meta_feature_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Front Image';
   $fe_block_boxes->format = 'php_code';
   $fe_block_boxes->machine_name = 'front_image';
-  $fe_block_boxes->body = '<img src="http://members.meta.org.au/sites/default/files/metaheader.jpg" />
+  $fe_block_boxes->body = '<img src="http://example.com/header.jpg" />
 ';
 
   $export['front_image'] = $fe_block_boxes;
