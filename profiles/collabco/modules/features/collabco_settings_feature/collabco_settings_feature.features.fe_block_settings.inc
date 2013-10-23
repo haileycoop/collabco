@@ -12,12 +12,12 @@ function collabco_settings_feature_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['iin_navigation_block-iin_navigation_block'] = array(
+  $export['collabco_navigation_block-collabco_navigation_block'] = array(
     'cache' => 1,
     'css_class' => 'sidetheme_nav',
     'custom' => 0,
-    'delta' => 'iin_navigation_block',
-    'module' => 'iin_navigation_block',
+    'delta' => 'collabco_navigation_block',
+    'module' => 'collabco_navigation_block',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(
@@ -41,12 +41,12 @@ function collabco_settings_feature_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['iin_profile_block-iin_profile_block'] = array(
+  $export['collabco_profile_block-collabco_profile_block'] = array(
     'cache' => 1,
     'css_class' => 'iin-profile-block',
     'custom' => 0,
-    'delta' => 'iin_profile_block',
-    'module' => 'iin_profile_block',
+    'delta' => 'collabco_profile_block',
+    'module' => 'collabco_profile_block',
     'node_types' => array(),
     'pages' => 'services',
     'roles' => array(

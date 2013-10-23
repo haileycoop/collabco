@@ -27,17 +27,17 @@ api = "2"
 ; -------------------
 ; Modules specific to this installation.
 
-projects[iin_navigation_block][type] = "module"
-projects[iin_navigation_block][download][type] = "git"
-projects[iin_navigation_block][download][url] = "git@github.com:Collabforge/collabco_navigation_block.git"
-projects[iin_navigation_block][download][branch] = "meta"
-projects[iin_navigation_block][subdir] = "custom"
+projects[collabco_navigation_block][type] = "module"
+projects[collabco_navigation_block][download][type] = "git"
+projects[collabco_navigation_block][download][url] = "git@github.com:Collabforge/collabco_navigation_block.git"
+projects[collabco_navigation_block][download][branch] = "meta"
+projects[collabco_navigation_block][subdir] = "custom"
 
-projects[iin_profile_block][type] = "module"
-projects[iin_profile_block][download][type] = "git"
-projects[iin_profile_block][download][url] = "git@github.com:Collabforge/collabco_profile_block.git"
-projects[iin_profile_block][download][branch] = "master"
-projects[iin_profile_block][subdir] = "custom"
+projects[collabco_profile_block][type] = "module"
+projects[collabco_profile_block][download][type] = "git"
+projects[collabco_profile_block][download][url] = "git@github.com:Collabforge/collabco_profile_block.git"
+projects[collabco_profile_block][download][branch] = "master"
+projects[collabco_profile_block][subdir] = "custom"
 
 ; DRUPAL 7
 ; --------

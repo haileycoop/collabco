@@ -317,7 +317,7 @@ function collabco_groups_feature_views_default_views() {
   $handler->display->display_options['relationships']['profile']['table'] = 'users';
   $handler->display->display_options['relationships']['profile']['field'] = 'profile';
   $handler->display->display_options['relationships']['profile']['bundle_types'] = array(
-    'iin_kickstarter' => 'iin_kickstarter',
+    'collabco_kickstarter' => 'collabco_kickstarter',
   );
   /* Relationship: OG membership: OG membership from User */
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';

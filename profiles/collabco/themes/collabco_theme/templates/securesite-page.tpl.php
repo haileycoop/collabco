@@ -18,7 +18,7 @@
 <?php print $scripts ?>
 </head>
 <body>
-<div id="splash-logo"><img class="center" src="<?php print $base_path . drupal_get_path('theme', 'openhub'). '/IIN_logo_final.png' ?>" /></div>
+<div id="splash-logo"><img class="center" src="<?php print $base_path . drupal_get_path('theme', 'openhub'). '/collabco_logo_final.png' ?>" /></div>
 <?php print $messages ?>
 <?php print $content ?>
 <form><div>

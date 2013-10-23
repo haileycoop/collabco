@@ -61,7 +61,7 @@ GH	NULL	NULL	Accra	NULL	NULL
 ID		NULL	Bandung	NULL	40134	Jalan Sadang Hegar 1 No. 12	RT04 RW13 Sadang Serang
 ID		NULL	Bekasi	NULL	17411	Jl.Binadharma 1 No.62. Jatiwaringin	
 ID		NULL	Jakarta	NULL			
-ID		NULL	Jakarta	NULL	12440	Jl. H. Niin 7	Lebak Bulus, Cilandak
+ID		NULL	Jakarta	NULL	12440	Jl. H. NCollabco 7	Lebak Bulus, Cilandak
 ID		NULL	Jakarta	NULL	13330	Otista	
 ID		NULL	Jakarta selatan	NULL	12000	jl. rawa jati timur 6 no. 10	
 ID		NULL	Jakarta Timur	NULL		Jl.Mulia No.15B Kel.Bidara Cina, Kec.Jatinegara, Jakarta Timur	
