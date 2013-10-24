@@ -1345,7 +1345,7 @@ function install_load_profile(&$install_state) {
     $install_state['profile_info'] = install_profile_info($install_state['parameters']['profile'], $install_state['parameters']['locale']);
   }
   else {
-    throw new Exception(st('Sorry, the profile you have chosen cannot be loaded.'));
+    throw new Exception(st('Sorry, the profile you have chosen cannot be loaded: '.$profile_file));
   }
 }
 
