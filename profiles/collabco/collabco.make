@@ -327,11 +327,6 @@ projects[block_class][subdir] = "contrib"
 ; @TODO - Test: projects[block_class][version] = "2.1"
 projects[block_class][version] = "2.0"
 
-projects[custom_theme][type] = "module"
-projects[custom_theme][download][type] = "git"
-projects[custom_theme][download][url] = "git@github.com:Collabforge/meta_theme.git"
-projects[custom_theme][type] = "theme"
-
 projects[collabco_theme][type] = "module"
 projects[collabco_theme][download][type] = "git"
 projects[collabco_theme][download][url] = "git@github.com:Collabforge/collabco_theme.git"
