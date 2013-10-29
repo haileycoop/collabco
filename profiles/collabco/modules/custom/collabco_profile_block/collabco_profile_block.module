@@ -1,0 +1,58 @@
+<?php
+
+
+
+/**
+ * Implements hook_block_info().
+ */
+function collabco_profile_block_block_info() {
+  $blocks = array();
+  $blocks['collabco_profile_block'] = array(
+    'info' => t('Collabco Profile Block (for front page)'),
+  );
+ 
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function collabco_profile_block_block_view($delta='') {
+  $block = array();
+  switch($delta) {
+    case 'collabco_profile_block' :
+      global $user;
+      global $base_url;
+      if (user_is_logged_in()) {
+        if (!property_exists($user, 'realname')) {
+          $user = user_load($user->uid);
+        }
+      }
+      $entity_type = 'node';
+      $field = 'title';
+      $groups_output = '';
+      $groups = og_get_groups_by_user($user);
+      if (!empty($groups)) {
+        foreach ($groups['node'] as $key => $gid) {
+          $node = node_load($gid);
+          $group_links = '<a href="'.$base_url.'/node/' . $node->nid . '">' . $node->title . '</a>';
+        }
+        $groups_output = '<div><h6>Your Groups:</h6><div>' . $group_links . '</div></div>';
+      }
+      $block['content'] = '<div id="iin-profile-title"><div id="iin-profile-welcome">Welcome </div><div id="iin-profile-name">'.$user->realname.'</div></div><div id="iin-profile-content" class="row-fluid"><div id="iin-profile-picture" class="span5 offset1">'.theme('user_picture', array('account' => $user)).'</div><div id="iin-profile-links" class="span6"><ul class="profile-block"><li><a href="'.$base_url.'/user">Profile</a></li><li><a href="'.$base_url.'/user/logout">Logout</a></li></ul></div></div>' . $groups_output;
+      break;
+  }
+  return $block;
+} 
+
+ /**
+ * Get all users of a group
+ */
+function collabco_profile_block_get_user_groups($uid) {
+  $query = db_select('node', 'n')
+    ->fields('n', array('nid'));
+    //->join('og_membership', 'm', 'n.nid = m.gid')
+    //->condition('m.etid', $uid, '=')
+    //->condition('m.type', 'user', '=');
+  return $query->execute();
+}
