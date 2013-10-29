@@ -158,9 +158,9 @@ projects[date][type] = "module"
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
 
-;projects[entityreference][type] = "module"
-;projects[entityreference][subdir] = "contrib"
-;projects[entityreference][version] = "1.x-dev"
+projects[entityreference][type] = "module"
+projects[entityreference][subdir] = "contrib"
+projects[entityreference][version] = "1.0"
 
 projects[field_collection][type] = "module"
 projects[field_collection][subdir] = "contrib"
@@ -331,11 +331,11 @@ projects[block_class][version] = "2.0"
 ;projects[collabco_theme][download][url] = "git@github.com:Collabforge/collabco_theme.git"
 ;projects[collabco_theme][type] = "theme"
 
-;projects[open_framework][type] = "module"
-;projects[open_framework][download][type] = "git"
-;projects[open_framework][download][url] = "git@github.com:SU-SWS/open_framework.git"
-;projects[open_framework][download][tag] = "7.x-2.04"
-;projects[open_framework][type] = "theme"
+projects[open_framework][type] = "module"
+projects[open_framework][download][type] = "git"
+projects[open_framework][download][url] = "git@github.com:SU-SWS/open_framework.git"
+projects[open_framework][download][tag] = "7.x-2.06"
+projects[open_framework][type] = "theme"
 
 
 ; THEME SUPPORT
