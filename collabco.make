@@ -333,7 +333,7 @@ projects[block_class][version] = "2.0"
 
 projects[open_framework][type] = "module"
 projects[open_framework][download][type] = "git"
-projects[open_framework][download][url] = "git@github.com:SU-SWS/open_framework.git"
+projects[open_framework][download][url] = "https://github.com/SU-SWS/open_framework.git"
 projects[open_framework][download][tag] = "7.x-2.06"
 projects[open_framework][type] = "theme"
 
