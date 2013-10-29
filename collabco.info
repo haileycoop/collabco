@@ -1,0 +1,445 @@
+
+;                       Install Profile - General Info
+;******************************************************************************
+
+; CORE VERSION
+; ------------
+; Each install profile should begin by declaring the core version of Drupal that all
+; projects should be compatible with.
+
+core = "7.23"
+
+; PROFILE INFO
+; ------------
+; Each install profile must have a name and a machine name (project) and should carry a descrption of the profile.
+
+name = "Collabco"
+project = "collabco"
+description = "Collabco is an online community for community, professional, education and policy group collaboration"
+
+; CORE MODULES - REQUIRED
+; -----------------------
+; Drupal Core Modules which are required to be enabled at install are declared as dependencies here.
+
+dependencies[] = "field"
+; (Note: this includes 'field_sql_storage')
+dependencies[] = "filter"
+dependencies[] = "node"
+dependencies[] = "system"
+dependencies[] = "text"
+dependencies[] = "user"
+
+; CORE MODULES - OPTIONAL
+; -----------------------
+; Drupal Core Modules which may be enabled at install are declared as dependencies here.
+
+; dependencies[] = "aggregator"
+dependencies[] = "block"
+; dependencies[] = "blog"
+; dependencies[] = "book"
+; dependencies[] = "color"
+dependencies[] = "comment"
+; dependencies[] = "contact"
+dependencies[] = "contextual"
+; dependencies[] = "dashboard"
+dependencies[] = "dblog"
+dependencies[] = "field_ui"
+dependencies[] = "file"
+dependencies[] = "filter"
+; dependencies[] = "forum"
+dependencies[] = "help"
+dependencies[] = "image"
+dependencies[] = "list"
+; dependencies[] = "locale"
+dependencies[] = "menu"
+dependencies[] = "number"
+; dependencies[] = "openid"
+dependencies[] = "options"
+; dependencies[] = "overlay"
+dependencies[] = "path"
+; dependencies[] = "poll"
+dependencies[] = "rdf"
+dependencies[] = "search"
+; dependencies[] = "shortcut"
+; dependencies[] = "statistics"
+; dependencies[] = "syslog"
+dependencies[] = "taxonomy"
+; dependencies[] = "testing"
+; dependencies[] = "toolbar"
+; dependencies[] = "tracker"
+; dependencies[] = "translation"
+dependencies[] = "trigger"
+dependencies[] = "update"
+
+; CONTRIBUTED MODULES - STANDARD
+; ------------------------------
+; Modules which are contributed and either pulled from drupal.org or our repository through Drush Make
+; If they should be enabled at install are declared as dependencies here.
+
+; // Administration menu (https://drupal.org/project/admin_menu)
+dependencies[] = "admin_devel"
+dependencies[] = "admin_menu"
+dependencies[] = "admin_menu_toolbar"
+; // Address Field (https://drupal.org/project/addressfield)
+; dependencies[] = "advanced_help"
+; // Administration Views (https://drupal.org/project/admin_views)
+; dependencies[] = "admin_views"
+; // AmazonS3 (https://drupal.org/project/amazons3)
+; dependencies[] = "amazons3"
+; // Apache Solr Search (https://drupal.org/project/apachesolr)
+; dependencies[] = "apachesolr"
+; dependencies[] = "apachesolr_search"
+; // Apache Solr Autocomplete (https://drupal.org/project/apachesolr_autocomplete)
+; dependencies[] = "apachesolr_autocomplete"
+; // Automatic Entity Label (https://drupal.org/project/auto_entitylabel)
+; dependencies[] = "auto_entitylabel"
+; // AWS SDK for PHP (https://drupal.org/project/awssdk)
+; dependencies[] = "awssdk"
+; // Better Exposed Filters (https://drupal.org/project/better_exposed_filters)
+dependencies[] = "better_exposed_filters"
+; // Better Formats (https://drupal.org/project/better_formats)
+dependencies[] = "better_formats"
+; // Block Class (https://drupal.org/project/block_class)
+dependencies[] = "block_class"
+; // browser class (https://drupal.org/project/browserclass)
+; dependencies[] = "browserclass"
+; // CAPTCHA (https://drupal.org/project/captcha)
+dependencies[] = "captcha"
+dependencies[] = "image_captcha"
+; // ckeditor (https://drupal.org/project/ckeditor)
+dependencies[] = "ckeditor"
+; // Campaign Monitor (https://drupal.org/project/campaignmonitor)
+; dependencies[] = "campaignmonitor"
+; // Complete profile (https://drupal.org/project/complete_profile)
+; dependencies[] = "complete_profile"
+; // Context (https://drupal.org/project/context)
+dependencies[] = "context"
+; // Context OG (https://drupal.org/project/context_og)
+dependencies[] = "context_og"
+; // Creative commons field (https://drupal.org/project/creative_commons)
+dependencies[] = "creative_commons"
+; // Chaos tool suite 'ctools' (https://drupal.org/project/ctools)
+dependencies[] = "ctools"
+; // Date (https://drupal.org/project/date)
+; // NOTE: Includes "date_api"
+dependencies[] = "date"
+dependencies[] = "date_popup"
+dependencies[] = "date_repeat"
+dependencies[] = "date_repeat_field"
+dependencies[] = "date_views"
+; // Drupal like 'Flag counter' (https://drupal.org/project/dlike)
+; dependencies[] = "dlike"
+; // Dialog API (https://drupal.org/project/dialog)
+; dependencies[] = "dialog"
+; // Emogrifier (https://drupal.org/project/emogrifier)
+; dependencies[] = "emogrifier"
+; // Entity API (https://drupal.org/project/entity)
+dependencies[] = "entity"
+dependencies[] = "entity_token"
+; // Entity connect (https://drupal.org/project/entityconnect)
+dependencies[] = "entityconnect"
+; // Entity reference (https://drupal.org/project/entityreference)
+dependencies[] = "entityreference"
+; // Facebook Rules (https://drupal.org/project/facebook_rules)
+; dependencies[] = "facebook_rules"
+; // Drupal for Facebook (https://drupal.org/project/fb)
+; dependencies[] = "fb"
+; // Facebook Connect (https://drupal.org/project/fbconnect)
+; dependencies[] = "fbconnect"
+; // Facebook OAuth Profile2 Integration (https://drupal.org/project/fboauth_profile2)
+; dependencies[] = "fboauth_profile2"
+; // Field collection (https://drupal.org/project/field_collection)
+dependencies[] = "field_collection"
+; // Field Collection Fieldset (https://drupal.org/project/field_collection_fieldset)
+dependencies[] = "field_collection_fieldset"
+; // FileField Nginx Progress (https://drupal.org/project/filefield_nginx_progress)
+dependencies[] = "filefield_nginx_progress"
+; // Features Extra (https://drupal.org/project/features_extra)
+dependencies[] = "fe_block"
+dependencies[] = "fe_nodequeue"
+; // Feeds (https://drupal.org/project/feeds)
+dependencies[] = "feeds"
+dependencies[] = "feeds_ui"
+; // Field Permissions (https://drupal.org/project/field_permissions)
+; dependencies[] = "field_permissions"
+; // Field as Block (https://drupal.org/project/fieldblock)
+; dependencies[] = "fieldblock"
+; // Flag Abuse (https://drupal.org/project/flag_abuse)
+; dependencies[] = "flag_abuse"
+; // Flag AJAX Confirm (https://drupal.org/project/flag_ajax_confirm)
+; dependencies[] = "flag_ajax_confirm"
+; // Flag (https://drupal.org/project/flag)
+; dependencies[] = "flag"
+; // Flagging Form (https://drupal.org/project/flagging_form)
+; dependencies[] = "flagging_form"
+; // Flowplayer API (https://drupal.org/project/flowplayer)
+; dependencies[] = "flowplayer"
+; // Global Redirect (https://drupal.org/project/globalredirect)
+; dependencies[] = "globalredirect"
+; // Google Analytics (https://drupal.org/project/google_analytics)
+; dependencies[] = "google_analytics"
+; // Hierarchical Select (https://drupal.org/project/hierarchical_select)
+; dependencies[] = "hierarchical_select"
+; // Honeypot (https://drupal.org/project/honeypot)
+; dependencies[] = "honeypot"
+; // Image Resize Filter (https://drupal.org/project/image_resize_filter)
+; dependencies[] = "image_resize_filter"
+; // ImageCache Actions (https://drupal.org/project/imagecache_actions)
+; dependencies[] = "imagecache_actions"
+; // Imagefield Crop (https://drupal.org/project/imagefield_crop)
+; dependencies[] = "imagefield_crop"
+; // Image style flush (https://drupal.org/project/imagestyleflush)
+; dependencies[] = "imagestyleflush"
+; // Job Scheduler (https://drupal.org/project/job_scheduler)
+dependencies[] = "job_scheduler"
+dependencies[] = "job_scheduler_trigger"
+; // jQuery Update (https://drupal.org/project/jquery_update)
+dependencies[] = "jquery_update"
+; // Legal (https://drupal.org/project/legal)
+dependencies[] = "legal"
+; // Libraries API (https://drupal.org/project/libraries)
+dependencies[] = "libraries"
+; // Lightbox2 (https://drupal.org/project/lightbox2)
+; dependencies[] = "lightbox2"
+dependencies[] = "link"
+; // Location (https://drupal.org/project/location)
+; dependencies[] = "location"
+; dependencies[] = "location_cck"
+; // LoginToboggan (https://drupal.org/project/logintoboggan)
+dependencies[] = "logintoboggan"
+; // Mail MIME (https://drupal.org/project/mailmime)
+; dependencies[] = "mailmime"
+; // Mail Editor (https://drupal.org/project/mail_edit)
+dependencies[] = "mail_edit"
+; // Mail System (https://drupal.org/project/mailsystem)
+dependencies[] = "mailsystem"
+; // Mandrill (https://drupal.org/project/mandrill)
+dependencies[] = "mandrill"
+dependencies[] = "mandrill_reports"
+dependencies[] = "mandrill_template"
+; // Maxlength (https://drupal.org/project/maxlength)
+; dependencies[] = "maxlength"
+; // me aliases (me aliases)
+; dependencies[] = "me"
+; // Menu attributes (https://drupal.org/project/menu_attributes)
+; dependencies[] = "menu_attributes"
+; // Menu block (https://drupal.org/project/menu_block)
+; dependencies[] = "menu_block"
+; // Message (https://drupal.org/project/message)
+; dependencies[] = "message"
+; // Metatag (https://drupal.org/project/metatag)
+; dependencies[] = "metatag"
+; // Migrate (https://drupal.org/project/migrate)
+dependencies[] = "migrate"
+dependencies[] = "migrate_ui"
+; // Drupal-to-Drupal data migration (https://drupal.org/project/migrate_d2d)
+dependencies[] = "migrate_d2d"
+; // Metatag (https://drupal.org/project/modal_forms)
+; dependencies[] = "modal_forms"
+; // 404 navigation "https://drupal.org/project/navigation404"
+; dependencies[] = "navigation404"
+; // Node export (https://drupal.org/project/node_export)
+; dependencies[] = "node_export"
+; // Node Limit (https://drupal.org/project/node_limit)
+; dependencies[] = "node_limit"
+; // Nodeblock (https://drupal.org/project/nodeblock)
+; dependencies[] = "nodeblock"
+; // Nodequeue (https://drupal.org/project/nodequeue)
+dependencies[] = "nodequeue"
+dependencies[] = "nodequeue_generate"
+; // Organic groups (Organic groups)
+dependencies[] = "og"
+dependencies[] = "og_access"
+dependencies[] = "og_context"
+dependencies[] = "og_field_access"
+dependencies[] = "og_register"
+dependencies[] = "og_ui"
+; // Olark Chat (https://drupal.org/project/olark)
+dependencies[] = "olark"
+; // Pathauto (https://drupal.org/project/pathauto)
+dependencies[] = "pathauto"
+; // pathologic (https://drupal.org/project/pathologic)
+dependencies[] = "pathologic"
+; // Profile 2 (https://drupal.org/project/profile2)
+dependencies[] = "profile2"
+dependencies[] = "profile2_page"
+; // Profile2 Registration Path (https://drupal.org/project/profile2_regpath)
+; dependencies[] = "profile2_regpath"
+; // Quick Tabs (https://drupal.org/project/quicktabs)
+dependencies[] = "quicktabs"
+; // Real Name (https://drupal.org/project/realname)
+dependencies[] = "realname"
+; // Realname registration (https://drupal.org/project/realname_registration)
+dependencies[] = "realname_registration"
+; // Redirect (https://drupal.org/project/redirect)
+; dependencies[] = "redirect"
+; // reCAPTCHA (https://drupal.org/project/recaptcha)
+dependencies[] = "recaptcha"
+; // Register with Picture (https://drupal.org/project/reg_with_pic)
+dependencies[] = "reg_with_pic"
+; // Register Pre-approved (https://drupal.org/project/register_preapproved)
+dependencies[] = "register_preapproved"
+; // Revisioning (https://drupal.org/project/revisioning)
+; dependencies[] = "revisioning"
+; // Rules (https://drupal.org/project/rules)
+; dependencies[] = "rules"
+; // Security Review (https://drupal.org/project/security_review)
+dependencies[] = "security_review"
+; // Site verification (https://drupal.org/project/site_verify)
+; dependencies[] = "site_verify"
+; // Special menu items (https://drupal.org/project/special_menu_items)
+; dependencies[] = "special_menu_items"
+; // State Machine (https://drupal.org/project/state_machine)
+; dependencies[] = "state_machine"
+; dependencies[] = "state_flow"
+; // String Overrides (https://drupal.org/project/stringoverrides)
+dependencies[] = "stringoverrides"
+; // Strongarm (https://drupal.org/project/strongarm)
+dependencies[] = "strongarm"
+; // System stream wrapper (https://drupal.org/project/system_stream_wrapper)
+; dependencies[] = "system_stream_wrapper"
+; // Tab Tamer (https://drupal.org/project/tabtamer)
+; dependencies[] = "tabtamer"
+; // Taxonomy Term Reference Tree Widget (https://drupal.org/project/term_reference_tree)
+; dependencies[] = "term_reference_tree"
+; // Token (https://drupal.org/project/token)
+dependencies[] = "token"
+; // Transliteration (https://drupal.org/project/transliteration)
+; dependencies[] = "transliteration"
+; // Twitter username (https://drupal.org/project/twitter_username)
+; dependencies[] = "twitter_username"
+; // URL field (https://drupal.org/project/url)
+; dependencies[] = "url"
+; // user picture field (https://drupal.org/project/user_picture_field)
+; dependencies[] = "user_picture_field"
+; // user Revision (https://drupal.org/project/user_revision)
+; dependencies[] = "user_revision"
+; // User Stats (https://drupal.org/project/user_stats)
+dependencies[] = "user_stats"
+; // Universally Unique IDentifier (https://drupal.org/project/uuid)
+dependencies[] = "uuid"
+; // Video Presents (https://drupal.org/project/video_presets)
+; dependencies[] = "video_presets"
+; // Video (https://drupal.org/project/video)
+; dependencies[] = "video"
+; // Views (https://drupal.org/project/views)
+dependencies[] = "views"
+dependencies[] = "views_ui"
+; // Views Autocomplete Filters (https://drupal.org/project/views_autocomplete_filters)
+dependencies[] = "views_autocomplete_filters"
+; // Views Bulk Operations 'VBO' (https://drupal.org/project/views_bulk_operations)
+dependencies[] = "views_bulk_operations"
+; // Views data export (https://drupal.org/project/views_data_export)
+dependencies[] = "views_data_export"
+; // Views Infinite Scroll (https://drupal.org/project/views_infinite_scroll)
+; dependencies[] = "views_infinite_scroll"
+; // Views Send (https://drupal.org/project/views_send)
+dependencies[] = "views_send"
+; // Webform Campaign Monitor (https://drupal.org/project/webform_campaignmonitor)
+; dependencies[] = "webform_campaignmonitor"
+; // Webform Reply To (https://drupal.org/project/webform_reply_to)
+; dependencies[] = "webform_reply_to"
+; // Webform Validation (https://drupal.org/project/webform_validation)
+; dependencies[] = "webform_validation"
+; // Webform (https://drupal.org/project/webform)
+; dependencies[] = "webform"
+; // Workbench (https://drupal.org/project/workbench)
+; dependencies[] = "workbench"
+; // Workbench Access (https://drupal.org/project/workbench_access)
+; dependencies[] = "workbench_access"
+; // Workbench Moderation (https://drupal.org/project/workbench_moderation)
+; dependencies[] = "workbench_moderation"
+; // XML sitemap (https://drupal.org/project/xmlsitemap)
+; dependencies[] = "xmlsitemap"
+; // YouTube Field (https://drupal.org/project/youtube)
+; dependencies[] = "youtube"
+
+; CONTRIBUTED MODULES - PATCHED
+; ------------------------------
+; Modules which are contributed and either pulled from drupal.org or our repository through Drush Make.
+; We have applied patches to these modules. See associated notes and migrate to standard if a later release fixes our issue(s).
+; If they should be enabled at install declare as dependencies here.
+
+; dependencies[] = "fboauth"
+
+; CONTRIBUTED MODULES - DEVELOPER
+; -------------------------------
+; Modules which are used for development and testing.
+; Not intended for distribution to a production environment.
+
+; // Coder (https://drupal.org/project/coder)
+dependencies[] = "coder"
+; // Coder Tough Love (https://drupal.org/project/coder_tough_love)
+dependencies[] = "coder_tough_love"
+; // Devel (https://drupal.org/project/devel)
+dependencies[] = "devel"
+dependencies[] = "devel_generate"
+; // Diff (https://drupal.org/project/diff)
+dependencies[] = "diff"
+; // Drupal For Firebug (https://drupal.org/project/drupalforfirebug)
+dependencies[] = "drupalforfirebug"
+; // Features (https://drupal.org/project/features)
+dependencies[] = "features"
+; // Grammer Parser (https://drupal.org/project/grammar_parser)
+; dependencies[] = "grammar_parser"
+; // Grammar Parser UI (https://drupal.org/project/grammar_parser_ui)
+; dependencies[] = "grammar_parser_ui"
+; // Grammer Parser Library (https://drupal.org/project/grammar_parser_lib)
+; dependencies[] = "grammar_parser_lib"
+; // Masquerade (https://drupal.org/project/masquerade)
+dependencies[] = "masquerade"
+; // UUID Features Integration (https://drupal.org/project/uuid_features)
+dependencies[] = "uuid_features"
+; // Variable (https://drupal.org/project/variable)
+; dependencies[] = "variable"
+
+; CONTRIBUTED MODULES - CUSTOMISED
+; --------------------------------
+; Modules which are based on contributed modules.
+; We have forked these modules. This is a customised version of a contributed module.
+; From time to time we should review the solution applied here and see if it still the ideal solution.
+; If they should be enabled at install declare as dependencies here.
+
+; Nothing to see here. Move along.
+; dependencies[] = "xx"
+
+; COLLABCO MODULES - cc_MODULENAME
+; --------------------------------
+; Modules which are written for this project and pulled from our repository through Drush Make.
+; All project modules for the Collabco project will be prepended with "cc_" then "_MODULENAME"
+; If they should be enabled at install are declared as dependencies here.
+
+; dependencies[] = "cc_MODULENAME"
+
+; dependencies[] = "cc_formats_feature"
+; dependencies[] = "cc_groups_feature"
+; dependencies[] = "cc_module"
+; dependencies[] = "cc_permissions_feature"
+; dependencies[] = "cc_settings_feature"
+
+dependencies[] = "collabco_navigation_block"
+dependencies[] = "collabco_profile_block"
+
+; dependencies[] = "collabco_formats_feature"
+; dependencies[] = "collabco_groups_feature"
+; dependencies[] = "collabco_module"
+; dependencies[] = "collabco_permissions_feature"
+; dependencies[] = "collabco_settings_feature"
+
+; EXISTING COLLABCO MODULES - collabco_MODULENAME
+; -----------------------------------------------
+; Modules which are written for this project and pulled from our repository through Drush Make.
+; All project modules for the Collabco project will be prepended with "cc_" then "_MODULENAME"
+; If they should be enabled at install are declared as dependencies here.
+
+dependencies[] = "collabco_conversation_feature"
+dependencies[] = "collabco_event_feature"
+dependencies[] = "collabco_extension_service_feature"
+dependencies[] = "collabco_formats_feature"
+dependencies[] = "collabco_groups_feature"
+dependencies[] = "collabco_message_feature"
+dependencies[] = "collabco_module"
+dependencies[] = "collabco_organisation_feature"
+dependencies[] = "collabco_permissions_feature"
+dependencies[] = "collabco_settings_feature"
+; dependencies[] = "collabco_front_page_feature"
