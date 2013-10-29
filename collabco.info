@@ -284,7 +284,7 @@ dependencies[] = "register_preapproved"
 ; // Rules (https://drupal.org/project/rules)
 ; dependencies[] = "rules"
 ; // Security Review (https://drupal.org/project/security_review)
-dependencies[] = "security_review"
+;dependencies[] = "security_review"
 ; // Site verification (https://drupal.org/project/site_verify)
 ; dependencies[] = "site_verify"
 ; // Special menu items (https://drupal.org/project/special_menu_items)
