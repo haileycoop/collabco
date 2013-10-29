@@ -300,9 +300,9 @@ projects[rules][version] = "2.5"
 ; SECURITY RELATED
 ; ----------------
 
-projects[security_review][type] = "module"
-projects[security_review][subdir] = "contrib"
-projects[security_review][version] = "1.1"
+;projects[security_review][type] = "module"
+;projects[security_review][subdir] = "contrib"
+;projects[security_review][version] = "1.1"
 
 ; SEO & ANALYTICS RELATED
 ; -----------------------
