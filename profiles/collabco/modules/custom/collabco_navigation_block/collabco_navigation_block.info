@@ -1,0 +1,11 @@
+name = Collabco Navigation Block
+description = provides a navigation block for site users.
+core = 7.x
+package = Collabco Custom
+
+
+; Information added by drush on 2013-08-29
+version = "meta-dev"
+project = "collabco_navigation_block"
+datestamp = "1377773591"
+
