@@ -32,7 +32,7 @@ api = "2"
 ; --------
 ; Core Drupal 7 CMS
 
-projects[drupal][version] = "7.21"
+projects[drupal][version] = "7.23"
 
 ; ADMIN
 ; -----
@@ -187,7 +187,7 @@ projects[uuid_features][version] = "1.0-alpha3"
 
 projects[features][type] = "module"
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.0"
+projects[features][version] = "2.0-rc5"
 
 projects[features_extra][type] = "module"
 projects[features_extra][subdir] = "contrib"
