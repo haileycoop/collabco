@@ -32,7 +32,7 @@ api = "2"
 ; --------
 ; Core Drupal 7 CMS
 
-;projects[drupal][version] = "7.23"
+projects[drupal][version] = "7.21"
 
 ; ADMIN
 ; -----
@@ -187,7 +187,8 @@ projects[uuid_features][version] = "1.0-alpha3"
 
 projects[features][type] = "module"
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.0"
+; @TODO - Test: projects[features][version] = "2.0-rc3"
+projects[features][version] = "2.0-rc1"
 
 projects[features_extra][type] = "module"
 projects[features_extra][subdir] = "contrib"
@@ -299,9 +300,9 @@ projects[rules][version] = "2.5"
 ; SECURITY RELATED
 ; ----------------
 
-;projects[security_review][type] = "module"
-;projects[security_review][subdir] = "contrib"
-;projects[security_review][version] = "1.1"
+projects[security_review][type] = "module"
+projects[security_review][subdir] = "contrib"
+projects[security_review][version] = "1.1"
 
 ; SEO & ANALYTICS RELATED
 ; -----------------------
