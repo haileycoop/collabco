@@ -15,13 +15,13 @@
 ; Each install profile should begin by declaring the core version of Drupal that all
 ; projects should be compatible with.
 
-;core = "7.x"
+core = "7.x"
 
 ; DRUSH API
 ; ---------
 ; Each make file should declare the Drush API version.
 
-;api = "2"
+api = "2"
 
 ; META CUSTOM MODULES
 ; -------------------
