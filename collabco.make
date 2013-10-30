@@ -180,15 +180,14 @@ projects[realname][version] = "1.1"
 
 projects[uuid_features][type] = "module"
 projects[uuid_features][subdir] = "contrib"
-projects[uuid_features][version] = "2.0"
+projects[uuid_features][version] = "1.0-alpha3"
 
 ; FEATURES
 ; --------
 
 projects[features][type] = "module"
 projects[features][subdir] = "contrib"
-; @TODO - Test: projects[features][version] = "2.0-rc3"
-projects[features][version] = "2.0-rc1"
+projects[features][version] = "2.0"
 
 projects[features_extra][type] = "module"
 projects[features_extra][subdir] = "contrib"
