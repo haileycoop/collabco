@@ -36,7 +36,7 @@ function collabco_navigation_block_block_view($delta='') {
        . '  </ul>'
        . '</div>';
     break;
-
+  }
   return $block;
 }
 
