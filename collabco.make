@@ -1,38 +1,16 @@
 ;******************************************************************************
-;            (META Variant) Collabco Install Profile - Make File
+;            Collabco Install Profile - Make File
 ;******************************************************************************
-
-; Build META codebase
-
-; @TODO - proper feature versioning, drupal releases or git tags??
-;       - use develop and master branches for dev and prod builds, duplicating
-;       this file for both. Would be nice to do this from a template with a rake
-;       task so we only need to update one version...
-;       - finishing moving all specific dependencies to make files in feature repos.
-
-; CORE VERSION
-; ------------
-; Each install profile should begin by declaring the core version of Drupal that all
-; projects should be compatible with.
 
 core = "7.x"
 
 ; DRUSH API
-; ---------
-; Each make file should declare the Drush API version.
-
 api = "2"
 
 ; META CUSTOM MODULES
 ; -------------------
 ; Modules specific to this installation.
 
-
-; DRUPAL 7
-; --------
-; Core Drupal 7 CMS
-
-projects[drupal][version] = "7.21"
 
 ; ADMIN
 ; -----
