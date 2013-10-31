@@ -103,8 +103,8 @@ function collabco_conversation_feature_views_default_views() {
 
   $view = new view();
   $view->name = 'join_the_conversation';
-  $view->description = 'Shows conversations and recent comments';
-  $view->tag = 'Conversation Feature';
+  $view->description = '';
+  $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Join the conversation';
   $view->core = 7;
@@ -142,24 +142,6 @@ function collabco_conversation_feature_views_default_views() {
   );
   $handler->display->display_options['row_options']['separator'] = '&nbsp;';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2>Current conversations</h2>
-<p>Click to join one of our current conversations:</p>';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Header: Global: View area */
-  $handler->display->display_options['header']['view']['id'] = 'view';
-  $handler->display->display_options['header']['view']['table'] = 'views';
-  $handler->display->display_options['header']['view']['field'] = 'view';
-  $handler->display->display_options['header']['view']['view_to_insert'] = 'conversation_titles:block';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area_1']['id'] = 'area_1';
-  $handler->display->display_options['header']['area_1']['table'] = 'views';
-  $handler->display->display_options['header']['area_1']['field'] = 'area';
-  $handler->display->display_options['header']['area_1']['content'] = '<p>Or scroll down for a preview.</p>';
-  $handler->display->display_options['header']['area_1']['format'] = 'full_html';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -428,6 +410,15 @@ function collabco_conversation_feature_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['created']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['created']['expose']['label'] = 'Most recent';
+  /* Sort criterion: Content: Comment count */
+  $handler->display->display_options['sorts']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['sorts']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['sorts']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['sorts']['comment_count']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['comment_count']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['comment_count']['expose']['label'] = 'Most active';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -442,18 +433,21 @@ function collabco_conversation_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'conversation' => 'conversation',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: OG membership: Group ID */
   $handler->display->display_options['filters']['gid']['id'] = 'gid';
   $handler->display->display_options['filters']['gid']['table'] = 'og_membership';
   $handler->display->display_options['filters']['gid']['field'] = 'gid';
   $handler->display->display_options['filters']['gid']['operator'] = 'empty';
+  $handler->display->display_options['filters']['gid']['group'] = 1;
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Join the conversation';
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['path'] = 'conversations';
-  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Join the conversation';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
@@ -599,6 +593,32 @@ function collabco_conversation_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'conversation' => 'conversation',
   );
+
+  /* Display: All Conversations */
+  $handler = $view->new_display('block', 'All Conversations', 'block_1');
+  $handler->display->display_options['display_description'] = 'Display all conversations';
+
+  /* Display: Most Recent Conversations */
+  $handler = $view->new_display('block', 'Most Recent Conversations', 'block_2');
+  $handler->display->display_options['display_description'] = 'Most Recent';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['created']['expose']['label'] = 'Most recent';
+
+  /* Display: Most Active */
+  $handler = $view->new_display('block', 'Most Active', 'block_3');
+  $handler->display->display_options['display_description'] = 'Most Active conversation';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Comment count */
+  $handler->display->display_options['sorts']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['sorts']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['sorts']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['sorts']['comment_count']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['comment_count']['expose']['label'] = 'Most active';
   $export['join_the_conversation'] = $view;
 
   return $export;

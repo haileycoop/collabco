@@ -13,7 +13,12 @@ function collabco_conversation_feature_field_default_field_instances() {
   // Exported field_instance: 'comment-comment_node_conversation-comment_body'
   $field_instances['comment-comment_node_conversation-comment_body'] = array(
     'bundle' => 'comment_node_conversation',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+        'format' => 'filtered_html',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -28,10 +33,11 @@ function collabco_conversation_feature_field_default_field_instances() {
     'entity_type' => 'comment',
     'field_name' => 'comment_body',
     'label' => 'Comment',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'email' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'php_code' => 'php_code',
@@ -41,6 +47,9 @@ function collabco_conversation_feature_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'email' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -56,14 +65,14 @@ function collabco_conversation_feature_field_default_field_instances() {
           ),
         ),
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 4,
       ),
       'type' => 'text_textarea',
       'weight' => 0,

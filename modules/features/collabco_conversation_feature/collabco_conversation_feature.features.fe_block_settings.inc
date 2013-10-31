@@ -26,10 +26,10 @@ function collabco_conversation_feature_default_fe_block_settings() {
       'authenticated user' => 2,
     ),
     'themes' => array(
-      'custom_theme' => array(
+      'collabco_theme' => array(
         'region' => 'content_lower',
         'status' => 1,
-        'theme' => 'custom_theme',
+        'theme' => 'collabco_theme',
         'weight' => 0,
       ),
       'seven' => array(
@@ -53,10 +53,10 @@ function collabco_conversation_feature_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'custom_theme' => array(
+      'collabco_theme' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'custom_theme',
+        'theme' => 'collabco_theme',
         'weight' => 0,
       ),
       'seven' => array(
@@ -82,10 +82,10 @@ function collabco_conversation_feature_default_fe_block_settings() {
       'authenticated user' => 2,
     ),
     'themes' => array(
-      'custom_theme' => array(
+      'collabco_theme' => array(
         'region' => 'content_lower',
         'status' => 1,
-        'theme' => 'custom_theme',
+        'theme' => 'collabco_theme',
         'weight' => -23,
       ),
       'seven' => array(
