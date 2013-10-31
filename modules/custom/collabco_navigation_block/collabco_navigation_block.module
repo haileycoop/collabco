@@ -19,10 +19,24 @@ function collabco_navigation_block_block_view($delta='') {
   $block = array();
   global $base_url;
   switch($delta) {
-    case 'collabco_navigation_block' :
-      $block['content'] = '<div id="met-logo"><a href="'.$base_url.'"><img src="'.$base_url.'/sites/all/themes/custom_theme/images/meta-    |logo.png"></a></div><div class="iin-nav"><ul class="nav"><li><a href="'.$base_url.'/about-this-site">ABOUT THIS SITE</a></li><li><a    |href="'.$base_url.'/conversations">JOIN THE CONVERSATION</a></li><li><a href="'.$base_url.'/community">THE COMMUNITY</a></li><li><a    |href="'.$base_url.'/members">MEMBER ORGANISATIONS</a></li><li><a href="'.$base_url.'/partners-providers">PARTNERS AND PROVIDERS</a></  |li><li><a href="'.$base_url.'/services">SERVICES</a></li><li><a href="'.$base_url.'/uploaded-files">LIBRARY</a></li></ul></div>';
-|    break;
-  }
+    case 'collabco_navigation_block':
+      $block['content'] = 
+         '<div id="met-logo">'
+       . '  <a href="' . $base_url . '"><img src="' . drupal_get_path('theme', 'custom_theme') . '/images/meta-logo.png"></a>'
+       . '</div>'
+       . '<div class="iin-nav">'
+       . '  <ul class="nav">'
+       . '  <li><a href="' . $base_url . '/about-this-site">ABOUT THIS SITE</a></li>'
+       . '  <li><a href="' . $base_url . '/conversations">JOIN THE CONVERSATION</a></li>'
+       . '  <li><a href="' . $base_url . '/community">THE COMMUNITY</a></li>'
+       . '  <li><a href="' . $base_url . '/members">MEMBER ORGANISATIONS</a></li>'
+       . '  <li><a href="' . $base_url . '/partners-providers">PARTNERS AND PROVIDERS</a></li>'
+       . '  <li><a href="' . $base_url . '/services">SERVICES</a></li>'
+       . '  <li><a href="' . $base_url . '/uploaded-files">LIBRARY</a></li>'
+       . '  </ul>'
+       . '</div>';
+    break;
+
   return $block;
 }
 
