@@ -21,7 +21,7 @@ function collabco_navigation_block_block_view($delta='') {
   switch($delta) {
     case 'collabco_navigation_block':
       $block['content'] = 
-         '<div id="met-logo">'
+         '<div class="collabco-logo">'
        . '  <a href="' . $base_url . '"><img src="' . drupal_get_path('theme', 'collabco_theme') . '/images/collabco-logo.png"></a>'
        . '</div>'
        . '<div class="iin-nav">'

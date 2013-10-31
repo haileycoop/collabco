@@ -147,7 +147,7 @@ body, p {
 3. LOGO, ICONS
 ---------------------------------------------
  */
-#logo {
+#logo, .collabco-logo {
   background-color: purple;
 }
 
